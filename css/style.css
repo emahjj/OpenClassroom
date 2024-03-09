@@ -14,7 +14,6 @@ h1 {
 }
 
 h2 {
-    align-self: stretch;
     color: #000;
     font-family: Raleway;
     font-size: 22px;
@@ -43,18 +42,12 @@ h3 {
 }
 
 body {
-    display: flex;
-    justify-content: center;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    display: flex;
     padding: 0px 50px;
-    flex-direction: column;
-    align-items: flex-start;
     gap: 35px;
-    align-self: stretch;
 }
 
 .main-container {
@@ -68,32 +61,6 @@ body {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-header {
-
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    padding-bottom: 30px;
-}
-
-.logo {
-    width: 61.09px;
-    height: 19px;
-    display: flex;
-    padding: 30px 50px; 
-}
-
-
-.nav-links {
-    display: flex;
-    padding: 0px 50px;
-    flex-direction:row;
-    align-items: flex-end;
-    gap: 25px;
 }
 
 .section-title {
@@ -124,55 +91,171 @@ nav {
     color: var(--main-bg-color)
 }
 
+
+
+/****** Header ***********/
+
+
+
+
+/****** Nav ***********/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0px 100px;
+}
+
+.logo { 
+    width: 61.09px;
+    height: 19px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding: 0px 50px;
+}
+
+.nav-links a:hover {
+    color: var(--Blue, #0065FC);
+    text-align: center;
+    border-top: 2px solid #0065FC;
+    position: relative; 
+    top: -10px; 
+
+}
+
 /****** Hero header ***********/
+
 .hero-header {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.hero-title {
-    
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    gap: -24px;
 }
 
-.hero-description {
-    
+.field-form {
+    display: flex;
+    width: 100px;
+    height: 49px;
+    align-items: center;
+    gap: 24px;
+    border-radius: 15px;
+    border: 1px solid var(--Grey, #F2F2F2);
+    background: var(--White, #FFF);
+    color: var(--Black, #000);
+    text-align: center;
+    font-family: Raleway;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
+
+.hero-button {
+    display: flex;
+    height: 49px;
+    padding: 15px 16px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid var(--Blue, #0065FC);
+    background: var(--Blue, #0065FC);
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    padding: 25px 0px;
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.filter-list-item {
+    display: flex;
+    height: 35px;
+    padding: 1px 10px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    border: 2px solid var(--Grey-Tint2, #D9D9D9);
+}
+
+.filter-list-item:hover {
+    background-color: var(--Blue-Light, #DEEBFF); /* Couleur de fond au survol */
+}
+
+.filter-alert {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 10px;   
+}   
+
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
-}
-
-.hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
+    flex-direction: row;
+    gap: 40px;
     border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
 }
-
-/****** Activités ***********/
-.activites {
-    display: flex;
-    justify-content: space-between;
-}
-
-.activites section {
-    background-color: white;
-    border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
-}
-
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background: var(--Grey, #F2F2F2);
+    padding: 30px;
 }
 
-.hebergements-title {
+.hebergements-ligne {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.hebergements .additional-info {
+    justify-content: left;
+    padding: 30px;
+    color: #000;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .hebergements-cards .card {
@@ -181,56 +264,44 @@ nav {
     padding-bottom: 15px;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    flex: 1 0 0;
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+    width: 250px;
 }
 
 .hebergements-cards img {
+    display: flex;
     height: 136px;
-    flex-shrink: 0;
     align-self: stretch;
     border-radius: 20px 20px 0px 0px;
     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-    display: flex;
+    
 }
 
 .hebergements-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
 }
-
-.hebergements-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-}
-
-.hebergements-cards .card-subtitle {
-    margin: 0;
-}
-
-.hebergements-cards .card-rating {
-    margin-bottom: 5px;
-}
-
 
 
 
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    border-radius: 15px;
+    background: var(--Grey, #F2F2F2);
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
 }
 
 .populaires-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: left;
+    padding: 30px;
 }
 
 .populaires-cards .card {
@@ -267,81 +338,79 @@ nav {
     margin-bottom: 5px;
 }
 
+
 /****** Activités ***********/
+
 .activites {
-    width: 32%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px 0px;
 }
 
 .activites-title {
+    padding: 10px;
+}
+
+.activites-cards {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    gap: 30px;
 }
 
 .activites-cards .card {
     display: flex;
     flex-direction: column;
+    width: 270px;
     margin-top: 33px;
 }
 
 .activites-cards img {
     height: 380px;
-    flex-shrink: 0;
     align-self: stretch;
     border-radius: 20px 20px 0px 0px;
     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-    display: flex;
 }
 
 .activites-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-    padding: 20px 19px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    align-self: stretch;
-    border-radius: 0px 0px 20px 20px;
-    background: var(--White, #FFF);
+    padding: 5px 10px;
 }
+
 
 /****** Footer ***********/
 footer {
     display:flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 50;
-    width:100%;
-    padding: 50px;
-    margin-bottom: 5px;
+    flex-direction: row;    
+    gap: 300px;
+    padding: 20px;
     background: var(--Grey, #F2F2F2);
 }
 
 .footer-block {
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
+
+.footer-title {
+    margin: 0px;
+} 
 
 .footer-list {
-    color: #000;
-    font-family: Raleway;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.footer-list-item {
     color: #000;
     font-family: Raleway;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-inline-start: 0px;
+    gap: 15px;
+} 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
