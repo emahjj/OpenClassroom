@@ -49,7 +49,15 @@
                             <path d="M25.1359 33.5955C23.2328 31.3326 19 25.8481 19 22.7675C19 19.0299 22.134 16 26 16C29.8646 16 33 19.0299 33 22.7675C33 25.8481 28.7344 31.3326 26.8641 33.5955C26.4156 34.1348 25.5844 34.1348 25.1359 33.5955ZM26 25.0234C27.287 25.0234 28.3333 24.0117 28.3333 22.7675C28.3333 21.5233 27.287 20.5117 26 20.5117C24.713 20.5117 23.6667 21.5233 23.6667 22.7675C23.6667 24.0117 24.713 25.0234 26 25.0234Z" fill="black"/>
                           </svg>
                         <input type="text" class="field-form" id="city-input" placeholder="Marseille, France" required>
-                        <button type="button" class="hero-button" onclick="searchCity()">Rechercher</button>
+                        <button type="button" class="hero-button" onclick="searchCity()">
+                            <span class="sr-only">Rechercher</span> <!-- Texte masqué pour l'accessibilité -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15.5 14H15.2L14.9 13.7C16.2 12.2 17 10.2 17 8C17 3.6 13.4 0 9 0C4.6 0 1 3.6 1 8C1 12.4 4.6 16 9 16C11.2 16 13.2 15.2 14.7 14.1L15 14.4V14.7L19.3 19L20.7 17.6L16.4 13.3C16.2 13.1 16.1 13 15.9 12.8L15.5 13.2V14ZM9 14C5.7 14 3 11.3 3 8C3 4.7 5.7 2 9 2C12.3 2 15 4.7 15 8C15 11.3 12.3 14 9 14Z" fill="white"/>
+                            </svg>
+                        </button>
+                        </button>
+
+
                     </form>
                 </div>
 

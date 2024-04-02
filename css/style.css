@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -52,13 +53,14 @@ body {
     padding:  0px 50px;
     box-sizing: border-box;
 }
-}
 
 a {
     color: inherit;
     text-decoration: none;
     margin: 0;
     padding: 0px;
+    flex-direction: row;
+    gap: 60px;
 }
 
 .section-title {
@@ -67,13 +69,11 @@ a {
     font-size: 22px;
 }
 
-
 .card {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    
 }
 
 .card :hover {
@@ -109,13 +109,12 @@ header {
 
 nav {
     display: flex;
-    height: 80px;
+    height: 140px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0px 0px 60px;
 }
-
 
 .logo { 
     width: 61.09px;
@@ -139,6 +138,7 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 60px;
+   
 }
 
 
@@ -148,14 +148,15 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 20px; 
 }
-
 
 form {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: -5px;
+    width: 350px;
 }
 
 .field-form {
@@ -171,6 +172,7 @@ form {
     font-style: normal;
     font-weight: 700;
     radius: 0px;
+    flex-grow: 1;
 }
 
 .hero-button {
@@ -181,7 +183,7 @@ form {
     gap: 10px;
     border-radius: 0px 15px 15px 0px;
     border: 1px solid var(--Blue, #0065FC);
-    background: var(--Blue, #0065FC);
+    background: var(--Blue, hsl(216, 100%, 49%));
     color: var(--White, #FFF);
     text-align: center;
     font-family: Raleway;
@@ -190,6 +192,7 @@ form {
     font-weight: 700;
     line-height: normal;
 }
+
 
 .filtre {
     color: black;
@@ -204,9 +207,9 @@ form {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    align-items: center;
     padding: 25px 0px;
 }
+
 
 .filter-list {
     display: flex;
@@ -214,12 +217,15 @@ form {
     gap: 15px;
 }
 
+
 .filter-list-item {
     display: flex;
     height: 35px;
     padding: 1px 10px;
     align-items: center;
     gap: 10px;
+    width: fit-content;
+
     border-radius: 25px;
     border: 2px solid var(--Grey-Tint2, #D9D9D9);
 }
@@ -314,6 +320,7 @@ form {
 
 .populaires {
     border-radius: 15px;
+    width: 33%;
     background: var(--Grey, #F2F2F2);
     display: flex;
     padding: 10px;
@@ -328,13 +335,16 @@ form {
     padding: 20px 30px 5px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 140px;
+    width: 100%;
 }
 
 .populaires-cards {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 100%;
     padding: 0px 30px;
     gap: 30px;
 }
@@ -390,7 +400,7 @@ form {
 
 .activites-cards {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
     padding: 0px 30px;
     gap: 50px;
 }
@@ -398,9 +408,9 @@ form {
 .activites-cards .card {
     display: flex;
     flex-direction: column;
-    width: 260px;
     margin-top: 33px;
     padding: 0px;
+    width: 280px;
 }
 
 .activites-cards img {
@@ -422,7 +432,7 @@ footer {
     flex-direction: row;    
     gap: 300px;
     padding: 60px 10px 10px;
-    margin: 20px;
+    margin: 20px 20px Opx;
     background: var(--Grey, #F2F2F2);
 }
 
@@ -456,16 +466,33 @@ ul {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-   xfpop
+ 
+.hebergements-and-populaires {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 20px;
+    }
+
+.populaires {
+        border-radius: 15px;
+        background: var(--Grey, #F2F2F2);
+        display: flex;
+        padding: 10px;
+        flex-direction: row;
+        align-items: flex-start;
+        align-self: stretch;
+        gap: 30px;
+    }
 }
+
+
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
     
 /****** General ***********/
-
-
 body {
     font-size: 16px;
     font-style: normal;
@@ -479,7 +506,6 @@ body {
 
 
 /****** Nav ***********/
-
 nav {
     display: flex;
     height: 115px;
@@ -489,15 +515,24 @@ nav {
     padding: 30px 0px 0px;
 }
 
-.nav-links a {
-    color: inherit;
-    text-decoration: none;
-    margin: 0;
-    padding: 30px;
+.nav-links {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
 }
 
-.nav-links {
+.nav-links a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: inherit;
+    margin: 0px;
+    padding: 30px;
     border-bottom: 2px solid #f1f2f4;
+    width: 100%;
+    padding-bottom: 15px;
 }
 
 .nav-links a:hover {
@@ -506,7 +541,6 @@ nav {
     border-top: none;
     border-bottom: 2px solid #0065FC;
 }
-
 
 /****** Header ***********/
 
@@ -518,7 +552,11 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding-left: 20px;
+    padding-left: 0px 20px;
+}
+
+.hero-button .sr-only {
+    display: none; /* Masquer le texte "Rechercher" sur la version mobile */
 }
 
 .filter-bar {
@@ -539,11 +577,25 @@ nav {
 .filter-list-item {
     display: flex;
     height: 35px;
-    width: 140px;
+    width: 150px;
     padding: 1px 10px;
     gap: 10px;
     border-radius: 25px;
     border: 2px solid var(--Grey-Tint2, #D9D9D9);
+}
+
+
+.hero-button {
+    display: inline-flex;
+    height: 49px;
+    padding: 15px 16px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 1px solid var(--Blue, #0065FC);
+    background: var(--Blue, #0065FC);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -564,6 +616,11 @@ nav {
     padding: 10px;
     width: 100%;
     gap: 30px;
+}
+
+
+.hebergements-cards .card {
+    width: 290px;
 }
 
 .populaires {
@@ -600,5 +657,8 @@ footer {
     flex-direction: column;    
     gap: 30px;
     padding: 60px 10px 10px;
+    margin: 0px;    
     background: var(--Grey, #F2F2F2);
+    padding: 45px;
 }
+
